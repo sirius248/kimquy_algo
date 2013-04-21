@@ -7,6 +7,11 @@ I created a simple ruby gem for sorting algorithms:
 + bubble sort
 + selection sort
 + heap sort
++ radix sort
++ bucket sort
++ counting sort
++ binary tree
++ red-black tree
 + and more ...
 
 ## Example
