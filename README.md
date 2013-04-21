@@ -2,10 +2,12 @@
 
 I created a simple ruby gem for sorting algorithms:
 + insertion sort
-+ merge sort
++ merge sort (this one still buggy need to be fixed)
 + quick sort
-
-updating...
++ bubble sort
++ selection sort
++ heap sort
++ and more ...
 
 ## Example
 

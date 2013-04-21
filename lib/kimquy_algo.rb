@@ -71,6 +71,22 @@ class Array
     self[j] = temp
   end
 
+  define_method(:selection_sort) do
+    0.upto(self.length-1) do |i|
+      minIndex = i
+      j = i
+      j.upto(self.length-1) do |k|
+        if self[k] < self[minIndex]
+          minIndex = k
+        end
+      end
+      
+      if minIndex != i
+        swap(minIndex,i)
+      end
+    end
+  end
+
   define_method(:quicksort) do
     kimquy_quicksort(self,0, self.length) 
   end
