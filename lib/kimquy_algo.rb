@@ -87,6 +87,25 @@ class Array
     end
   end
 
+  define_method(:bubble_sort) do
+    swapped = true
+    j = 0
+    
+    while(swapped)
+      swapped = false
+      j += 1
+      0.upto(self.length-j-1) do |i|
+        if self[i] > self[i+1]
+          temp = self[i]
+          self[i] = self[i+1]
+          self[i+1] = temp
+          swapped = true
+        end
+      end
+    end
+  end
+
+
   define_method(:quicksort) do
     kimquy_quicksort(self,0, self.length) 
   end
