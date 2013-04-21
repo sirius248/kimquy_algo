@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nguy1461@vandals.uidaho.edu"]
   spec.description   = %q{Algorithm and data structure}
   spec.summary       = %q{Algorithm library}
-  spec.homepage      = "http://kimquy.github.io"
+  spec.homepage      = "https://github.com/kimquy/kimquy_algo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
