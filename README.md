@@ -11,8 +11,23 @@ I created a simple ruby gem for sorting algorithms:
 
 ## Example
 
-array = [10,9,8,7,6,5,4,3,2,1] <br/>
-array.quicksort -> [1,2,3,4,5,6,7,8,9,10] <br/>
+		require 'kimquy_algo'
+		require 'benchmark'
+
+		arr = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+		puts Benchmark.measure { arr.insertion_sort }
+
+
+		arr = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+		puts Benchmark.measure {arr.quicksort }
+
+
+		arr = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+		puts Benchmark.measure {arr.bubble_sort}
+
+
+		arr = [20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+		puts Benchmark.measure {arr.selection_sort}
 
 ## Installation
 
