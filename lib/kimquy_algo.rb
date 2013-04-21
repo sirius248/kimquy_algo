@@ -1,7 +1,4 @@
-require "kimquy_algo/version"
-
-module KimquyAlgo
-  # Your code goes here...
+module Sorting
   def kimquy_quicksort(a, p, r)
     if p < r
       q = partition(a, p, r) 
@@ -42,14 +39,31 @@ module KimquyAlgo
     end
   end
 
-  def merge
-    
-  end
+  def merge(a, p, q, r)
+  
+    left = a[p..q-1]
+    right = a[q..r]
 
+    left << 1000000000   #sentinel
+    right << 1000000000  #sentinel
+
+    i = 0
+    j = 0
+    k = p
+    k.upto(r-1) do |x|
+      if left[i] <= right[j]
+        a[x] = left[i]
+        i = i + 1
+      else
+        a[x] = right[j]
+        j = j + 1
+      end
+    end
+  end
 end
 
 class Array
-  include KimquyAlgo
+  include Sorting
 
   define_method(:swap) do |i,j|
     temp = self[i]
@@ -72,4 +86,9 @@ class Array
       self[i+1] = key
     end
   end
+
+  define_method(:merge_sort) do
+    kimquy_merge_sort(self,0,self.length)
+  end
 end
+
