@@ -6,13 +6,9 @@ I created a simple ruby gem for sorting algorithms:
 + quick sort
 + bubble sort
 + selection sort
-+ heap sort
-+ radix sort
-+ bucket sort
-+ counting sort
-+ binary tree
-+ red-black tree
-+ and more ...
++ knuth_shuffle (shuffle an array)
++ shell sort (3-h shell sort)
++ updating more stuff ...
 
 ## Example
 

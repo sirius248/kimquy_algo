@@ -134,5 +134,23 @@ class Array
     end
   end
 
+  define_method(:shell_sort) do
+    h = 1
+    while ( h < self.length)
+      h = 3*h + 1
+    end
+
+    while(h >= 1)
+      h.upto(self.length - 1) do |i|
+        j = i
+        while j >= h && self[j-h] > self[j] 
+          swap(j, j-h)
+          j -= h
+        end 
+      end
+      h = h/3
+    end
+  end
+
 end
 
