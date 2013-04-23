@@ -2,7 +2,7 @@
 
 I created a simple ruby gem for sorting algorithms:
 + insertion sort
-+ merge sort (this one still buggy need to be fixed)
++ merge sort 
 + quick sort
 + bubble sort
 + selection sort

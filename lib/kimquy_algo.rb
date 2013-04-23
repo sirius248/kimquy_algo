@@ -41,16 +41,16 @@ module Sorting
 
   def merge(a, p, q, r)
   
-    left = a[p..q-1]
-    right = a[q..r]
+    left = a[p..q]
+    right = a[q+1..r]
 
-    left << 1000000000   #sentinel
-    right << 1000000000  #sentinel
+    left << 1000000000 #sentinel
+    right << 1000000000 #sentinel
 
     i = 0
     j = 0
     k = p
-    k.upto(r-1) do |x|
+    k.upto(r) do |x|
       if left[i] <= right[j]
         a[x] = left[i]
         i = i + 1
@@ -60,6 +60,7 @@ module Sorting
       end
     end
   end
+
 end
 
 class Array
@@ -124,6 +125,7 @@ class Array
 
   define_method(:merge_sort) do
     kimquy_merge_sort(self,0,self.length)
+    self.pop
   end
 
   define_method(:knuth_shuffle) do
