@@ -125,5 +125,14 @@ class Array
   define_method(:merge_sort) do
     kimquy_merge_sort(self,0,self.length)
   end
+
+  define_method(:knuth_shuffle) do
+    p = Random.new
+    0.upto(self.length - 1) do |i|
+      temp = p.rand(0..i) 
+      swap(temp,i)
+    end
+  end
+
 end
 
